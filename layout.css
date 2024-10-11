@@ -1,0 +1,61 @@
+.nav-links a {
+    margin: 0 15px;
+    font-size: 18px;
+    position: relative; /* Ensure relative positioning for pseudo-element */
+    text-decoration: none; /* Remove default underline */
+    color: white;
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+  }
+
+  .nav-link {
+    font-size: 0.875rem !important; 
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00; /* Yellow underline color */
+    transition: width 0.3s ease-in-out; /* Animation speed and easing */
+  }
+
+      /* Customizing navbar */
+      .navbar {
+        background-color: #343a40;
+      }
+  
+      .navbar-nav .nav-link {
+        color: white !important;
+      }
+  
+      .navbar-brand {
+        color: whitesmoke;
+      }
+
+          /* Footer styles */
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+  
+      footer a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+  
+      footer a:hover {
+        color: #cccccc;
+        text-decoration: underline;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure the body covers the entire viewport height */
+      }
+  
