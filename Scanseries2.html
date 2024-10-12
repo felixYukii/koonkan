@@ -18,7 +18,7 @@
         height: 300px; /* Set a fixed height for consistency */
         margin: 10px 0; /* Margin between cards */
       }
-      
+
       .flip-card-inner {
         position: relative;
         width: 100%;
@@ -27,11 +27,11 @@
         transform-style: preserve-3d; /* Ensure children are positioned in 3D space */
         display: flex; /* Flex layout for inner content */
       }
-      
+
       .flip-card.flipped .flip-card-inner {
         transform: rotateY(180deg);
       }
-      
+
       .flip-card-front,
       .flip-card-back {
         position: absolute; /* Keep both sides positioned absolutely */
@@ -42,21 +42,23 @@
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
       }
-      
+
       .flip-card-front {
         position: relative; /* Allow positioning of title */
         flex-direction: column; /* Stack the title above the image */
       }
-      
+
       .flip-card-front h4 {
         position: absolute; /* Position it above the image */
         top: 10px; /* Adjust to place it at the top */
         left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust position back by half its width */
+        transform: translateX(
+          -50%
+        ); /* Adjust position back by half its width */
         margin: 0; /* Remove default margins */
         z-index: 1; /* Ensure it sits above the image */
       }
-      
+
       .flip-card-front img {
         max-width: 100%;
         height: auto;
@@ -64,7 +66,7 @@
         object-fit: cover;
         padding-top: 50px; /* Space between title and image */
       }
-      
+
       .flip-card-back {
         transform: rotateY(180deg); /* Rotate the back card */
         background-color: #f8f9fa; /* Background color for visibility */
@@ -73,30 +75,30 @@
         border: 1px solid #ccc; /* Optional: border for visibility */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
       }
-      
+
       /* Other styles remain unchanged */
       /* Flexbox layout for body and footer */
       .container-fluid {
         flex: 1;
       }
-      
+
       .title-image {
         max-height: 150px;
         width: auto;
         display: block;
         margin: 20px auto;
       }
-      
+
       .smaller-image {
         max-height: 200px;
         width: auto;
         margin: 20px auto;
       }
-      
+
       .nav-links a:hover::after {
         width: 100%;
       }
-      
+
       .box {
         background-color: #f0f0f0;
         border: 1px solid #ccc;
@@ -111,23 +113,23 @@
         transition: opacity 0.5s ease, transform 0.5s ease;
         text-align: center;
       }
-      
+
       .box.animated {
         opacity: 1;
         transform: translateY(0);
       }
-      
+
       .info-card {
         width: 100%;
       }
-      
+
       .scan-series-title {
         text-align: center;
         font-size: 28px;
         margin-top: 40px;
         font-weight: bold;
       }
-      
+
       .full-width-image {
         max-height: 300px;
         width: auto;
@@ -135,67 +137,80 @@
         display: block;
         margin: auto;
       }
-      
+
       .row-box img {
         max-width: 100%;
         height: auto;
         margin-bottom: 15px;
       }
-      
+
       .row-box h4 {
         margin-bottom: 10px;
         text-align: center;
       }
-      
+
       .box p {
         text-align: left;
         margin-top: 10px;
       }
-      </style>
-      
+    </style>
   </head>
   <body>
-  <!-- Improved Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="./">Koon Kan</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto nav-links">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Homepage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Scanseries.html">Scan Series</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="Scanseries2.html">Scan Series 2.0</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="3D.html">3D Printing Experimental Works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="early.html">Early Experimental Works</a>
-          </li>
-        </ul>
+    <!-- Improved Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="./">Koon Kan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto nav-links">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Scanseries.html">Scan Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Scanseries2.html"
+                >Scan Series 2.0</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="3D.html"
+                >3D Printing Experimental Works</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="early.html">Early Experimental Works</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <div class="container">
       <h2 class="scan-series-title">
-        <i>Scan Series 2
-        <br>Voyage to the Betwixt-and-Between</i>
+        <i>Scan Series 2 <br />Voyage to the Betwixt-and-Between</i>
       </h2>
       <div class="row">
         <div class="col-md-12">
           <h4 class="lead">
-            <br><i>In this series of creative digital photocollages, I tried to visually represent the dilemma
-              that Southeast Asia currently faces. My research interest grew when a territorial
-              dispute over the South China Sea, one of the busiest waterways in the world,
-              garnered the attention of world mass media. </i>          
+            <br /><i
+              >In this series of creative digital photocollages, I tried to
+              visually represent the dilemma that Southeast Asia currently
+              faces. My research interest grew when a territorial dispute over
+              the South China Sea, one of the busiest waterways in the world,
+              garnered the attention of world mass media.
+            </i>
           </h4>
         </div>
       </div>
@@ -207,23 +222,25 @@
       />
       <div class="text-center">
         <h6><i>Scan for Our Split Superego 青花缸 (aka A4)</i></h6>
-    </div>
+      </div>
     </div>
 
     <div class="container mt-5">
-    
       <!-- Second row: 2 boxes -->
       <div class="row">
         <div class="col-md-6 d-flex">
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/3Scan Series 2.0 x5pics/SS2.0 1 Scan for Sugar Coated Facts S.jpeg" alt="Image 1" />
-                <br><h6><i>Scan for Sugar Coated Facts 砵</i></h6>
+                <img
+                  src="img/3Scan Series 2.0 x5pics/SS2.0 1 Scan for Sugar Coated Facts S.jpeg"
+                  alt="Image 1"
+                />
+                <br />
+                <h6><i>Scan for Sugar Coated Facts 砵</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>44 x 24
-                  <br>2021</p>
+                <p>Scan for Sugar Coated Facts 砵 <br />2021 <br />44 x 24</p>
               </div>
             </div>
           </div>
@@ -232,30 +249,38 @@
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/3Scan Series 2.0 x5pics/SS2.0 2 Scan for Whose Future S.jpeg" alt="Image 2" />
-                <br><h6><i>Scan for Whose Future ⾦樽邀⽉</i></h6>
+                <img
+                  src="img/3Scan Series 2.0 x5pics/SS2.0 2 Scan for Whose Future S.jpeg"
+                  alt="Image 2"
+                />
+                <br />
+                <h6><i>Scan for Whose Future ⾦樽邀⽉</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>32 x 30
-                  <br>2024</p>
+                <p>Scan for Whose Future ⾦樽邀⽉ <br />2024 <br />32 x 30</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
+
       <!-- Third row: 2 boxes -->
       <div class="row">
         <div class="col-md-6 d-flex">
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/3Scan Series 2.0 x5pics/SS2.0 4 Scan for Whose Interest Now S.jpeg" alt="Image 3" />
-                <br><h6><i>Scan for Whose Interest Now 鐵飯碗</i></h6>
+                <img
+                  src="img/3Scan Series 2.0 x5pics/SS2.0 4 Scan for Whose Interest Now S.jpeg"
+                  alt="Image 3"
+                />
+                <br />
+                <h6><i>Scan for Whose Interest Now 鐵飯碗</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>21 x 29
-                  <br>2022</p>
+                <p>
+                  Scan for Whose Interest Now 鐵飯碗 <br />2022 <br />21 x 29
+                </p>
               </div>
             </div>
           </div>
@@ -264,23 +289,24 @@
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/3Scan Series 2.0 x5pics/SS2.0 5 Scan No Spring That Year 重碟 S.jpg" alt="Image 4" />
-                <br><h6><i>Scan No Spring That Turbulent Year 重碟</i></h6>
+                <img
+                  src="img/3Scan Series 2.0 x5pics/SS2.0 5 Scan No Spring That Year 重碟 S.jpg"
+                  alt="Image 4"
+                />
+                <br />
+                <h6><i>Scan No Spring That Turbulent Year 重碟</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>14 x 18
-                  <br>2023</p>
+                <p>
+                  Scan No Spring That Turbulent Year 重碟 <br />2023 <br />14 x
+                  18
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
     </div>
-    
-
-    
-    
 
     <footer class="bg-dark text-white text-center py-3 mt-4">
       <p>© 2024 Koon Kan. All rights reserved.</p>

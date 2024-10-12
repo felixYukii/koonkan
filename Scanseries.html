@@ -18,7 +18,7 @@
         height: 350px; /* Set a fixed height for consistency */
         margin: 10px 0; /* Margin between cards */
       }
-      
+
       .flip-card-inner {
         position: relative;
         width: 100%;
@@ -27,11 +27,11 @@
         transform-style: preserve-3d; /* Ensure children are positioned in 3D space */
         display: flex; /* Flex layout for inner content */
       }
-      
+
       .flip-card.flipped .flip-card-inner {
         transform: rotateY(180deg);
       }
-      
+
       .flip-card-front,
       .flip-card-back {
         position: absolute; /* Keep both sides positioned absolutely */
@@ -42,21 +42,23 @@
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
       }
-      
+
       .flip-card-front {
         position: relative; /* Allow positioning of title */
         flex-direction: column; /* Stack the title above the image */
       }
-      
+
       .flip-card-front h4 {
         position: absolute; /* Position it above the image */
         top: 10px; /* Adjust to place it at the top */
         left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust position back by half its width */
+        transform: translateX(
+          -50%
+        ); /* Adjust position back by half its width */
         margin: 0; /* Remove default margins */
         z-index: 1; /* Ensure it sits above the image */
       }
-      
+
       .flip-card-front img {
         max-width: 100%;
         height: auto;
@@ -65,7 +67,6 @@
         padding-top: 50px; /* Space between title and image */
       }
 
-      
       .flip-card-back {
         transform: rotateY(180deg); /* Rotate the back card */
         background-color: #f8f9fa; /* Background color for visibility */
@@ -74,30 +75,30 @@
         border: 1px solid #ccc; /* Optional: border for visibility */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
       }
-      
+
       /* Other styles remain unchanged */
       /* Flexbox layout for body and footer */
       .container-fluid {
         flex: 1;
       }
-      
+
       .title-image {
         max-height: 150px;
         width: auto;
         display: block;
         margin: 20px auto;
       }
-      
+
       .smaller-image {
         max-height: 200px;
         width: auto;
         margin: 20px auto;
       }
-      
+
       .nav-links a:hover::after {
         width: 100%;
       }
-      
+
       .box {
         background-color: #f0f0f0;
         border: 1px solid #ccc;
@@ -112,23 +113,23 @@
         transition: opacity 0.5s ease, transform 0.5s ease;
         text-align: center;
       }
-      
+
       .box.animated {
         opacity: 1;
         transform: translateY(0);
       }
-      
+
       .info-card {
         width: 100%;
       }
-      
+
       .scan-series-title {
         text-align: center;
         font-size: 28px;
         margin-top: 40px;
         font-weight: bold;
       }
-      
+
       .full-width-image {
         max-height: 300px;
         width: auto;
@@ -136,13 +137,13 @@
         display: block;
         margin: auto;
       }
-      
+
       .row-box img {
         max-width: 100%;
         height: auto;
         margin-bottom: 15px;
       }
-      
+
       .row-box h4 {
         margin-bottom: 10px;
         text-align: center;
@@ -154,56 +155,69 @@
       }
 
       .flip-card-front.big-image img {
-  max-width: 100%;  /* or a custom width, e.g., 600px */
-  height: auto;     /* Maintain aspect ratio */
-  max-height: 300px;  /* Adjust the maximum height if needed */
-}
-
-      </style>
-      
+        max-width: 100%; /* or a custom width, e.g., 600px */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Adjust the maximum height if needed */
+      }
+    </style>
   </head>
   <body>
-  <!-- Improved Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="./">Koon Kan</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto nav-links">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Homepage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="Scanseries.html">Scan Series</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Scanseries2.html">Scan Series 2.0</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="3D.html">3D Printing Experimental Works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="early.html">Early Experimental Works</a>
-          </li>
-        </ul>
+    <!-- Improved Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="./">Koon Kan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto nav-links">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Scanseries.html">Scan Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Scanseries2.html">Scan Series 2.0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="3D.html"
+                >3D Printing Experimental Works</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="early.html">Early Experimental Works</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <div class="container">
       <h2 class="scan-series-title">
-        <i>Scan Series 
-        <br> dissect * enmesh * revive</i>
+        <i
+          >Scan Series <br />
+          dissect * enmesh * revive</i
+        >
       </h2>
 
       <div class="row">
         <div class="col-md-12">
           <h4 class="lead">
-            <br><i>This series of creative digital photocollages with its changing imaginaries as well as
-            contour outlines tracked my personal visual transformations in 2020 over 8.5 months
-            living in pandemic-induced solitude.</i>          
+            <br /><i
+              >This series of creative digital photocollages with its changing
+              imaginaries as well as contour outlines tracked my personal visual
+              transformations in 2020 over 8.5 months living in pandemic-induced
+              solitude.</i
+            >
           </h4>
         </div>
       </div>
@@ -213,10 +227,10 @@
         alt="Scan Series Image"
         class="full-width-image"
       />
-    <!-- Centered Scan Me -->
-    <div class="text-center">
-      <h6><i>Scan for Whose Future</i></h6>
-  </div>
+      <!-- Centered Scan Me -->
+      <div class="text-center">
+        <h6><i>Scan for Whose Future</i></h6>
+      </div>
     </div>
 
     <div class="container mt-5">
@@ -227,11 +241,11 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="img/Image3.jpg" alt="Image 3" />
-                <br><h6><i>Scan Me</i></h6>
+                <br />
+                <h6><i>Scan Me</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>7 x 13.5
-                  <br>2021</p>
+                <p>Scan Me <br />2021 <br />7 x 13.5</p>
               </div>
             </div>
           </div>
@@ -241,12 +255,11 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="img/Image1.jpg" alt="Image 1" />
-                <br><h6><i>Scan Me Too</i></h6>
+                <br />
+                <h6><i>Scan Me Too</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>7.5 x 7
-                  <br>2020
-                </p>
+                <p>Scan Me Too <br />2020 <br />7.5 x 7</p>
               </div>
             </div>
           </div>
@@ -256,30 +269,32 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="img/Image2.jpg" alt="Image 2" />
-                <br><h6><i>Scan Always</i></h6>
+                <br />
+                <h6><i>Scan Always</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>8 x 12
-                  <br>2020
-                </p>
+                <p>Scan Always <br />2020 <br />8 x 12</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
+
       <!-- Second row: 2 boxes -->
       <div class="row">
         <div class="col-md-6 d-flex">
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/9Scan Later for Our Common Id S.jpeg" alt="Image 4" />
-                <br><h6><i>Scan Later for Our Common Id</i></h6>
+                <img
+                  src="img/9Scan Later for Our Common Id S.jpeg"
+                  alt="Image 4"
+                />
+                <br />
+                <h6><i>Scan Later for Our Common Id</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>21 x 36
-                  <br>2022</p>
+                <p>Scan Later for Our Common Id <br />2022 <br />21 x 36</p>
               </div>
             </div>
           </div>
@@ -289,17 +304,17 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="img/6Scan for Tang Always S.jpg" alt="Image 5" />
-                <br><h6><i>Scan for Tang Glory Always</i></h6>
+                <br />
+                <h6><i>Scan for Tang Glory Always</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>13 x 23
-                  <br>2020</p>
+                <p>Scan for Tang Glory Always <br />2020 <br />13 x 23</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
+
       <!-- Third row: 2 boxes -->
       <div class="row">
         <div class="col-md-6 d-flex">
@@ -307,11 +322,11 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="img/10Scan for Nothing Today S.jpeg" alt="Image 6" />
-                <br><h6><i>Scan for Nothing Today</i></h6>
+                <br />
+                <h6><i>Scan for Nothing Today</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>20 x 28
-                  <br>2021</p>
+                <p>Scan for Nothing Today <br />2021 <br />20 x 28</p>
               </div>
             </div>
           </div>
@@ -321,39 +336,38 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="img/11Scan Slowly for Our Ego S.jpeg" alt="Image 7" />
-                <br><h6><i>Scan Slowly for Our Ego</i></h6>
+                <br />
+                <h6><i>Scan Slowly for Our Ego</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>30 x 44
-                  <br>2021</p>
+                <p>Scan Slowly for Our Ego <br />2021 <br />30 x 44</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    
+
       <!-- Fourth row: 1 box -->
       <div class="row">
         <div class="col-md-12 d-flex">
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front big-image">
-                <img src="img/12Scan for Everything Today S.jpeg" alt="Image 8" />
-                <br><h6><i>Scan for Everything Today</i></h6>
+                <img
+                  src="img/12Scan for Everything Today S.jpeg"
+                  alt="Image 8"
+                />
+                <br />
+                <h6><i>Scan for Everything Today</i></h6>
               </div>
               <div class="flip-card-back">
-                <p>25 x 39
-                  <br>2021</p>
+                <p>Scan for Everything Today <br />2021 <br />25 x 39</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-
-    
-    
 
     <footer class="bg-dark text-white text-center py-3 mt-4">
       <p>© 2024 Koon Kan. All rights reserved.</p>
