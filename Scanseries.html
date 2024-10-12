@@ -15,7 +15,7 @@
         cursor: pointer; /* Change the cursor to a pointer on hover */
         perspective: 1000px;
         width: 100%; /* Ensure all cards are the same width */
-        height: 300px; /* Set a fixed height for consistency */
+        height: 350px; /* Set a fixed height for consistency */
         margin: 10px 0; /* Margin between cards */
       }
       
@@ -147,11 +147,17 @@
         margin-bottom: 10px;
         text-align: center;
       }
-      
+
       .box p {
         text-align: left;
         margin-top: 10px;
       }
+
+      .flip-card-front.big-image img {
+  max-width: 100%;  /* or a custom width, e.g., 600px */
+  height: auto;     /* Maintain aspect ratio */
+  max-height: 300px;  /* Adjust the maximum height if needed */
+}
 
       </style>
       
@@ -331,7 +337,7 @@
         <div class="col-md-12 d-flex">
           <div class="box w-100 flip-card">
             <div class="flip-card-inner">
-              <div class="flip-card-front">
+              <div class="flip-card-front big-image">
                 <img src="img/12Scan for Everything Today S.jpeg" alt="Image 8" />
                 <br><h6><i>Scan for Everything Today</i></h6>
               </div>
