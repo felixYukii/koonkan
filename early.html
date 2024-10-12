@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Experimental Works</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+      .flip-card {
+        cursor: pointer; /* Change the cursor to a pointer on hover */
+        perspective: 1000px;
+        width: 100%; /* Ensure all cards are the same width */
+        margin: 10px 0; /* Margin between cards */
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d; /* Ensure children are positioned in 3D space */
+        display: flex; /* Flex layout for inner content */
+      }
+      
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute; /* Keep both sides positioned absolutely */
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; /* Prevent the back side from showing when not flipped */
+        display: flex; /* Center content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+      
+      .flip-card-front {
+        position: relative; /* Allow positioning of title */
+        flex-direction: column; /* Stack the title above the image */
+      }
+      
+      .flip-card-front h4 {
+        position: absolute; /* Position it above the image */
+        top: 10px; /* Adjust to place it at the top */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust position back by half its width */
+        margin: 0; /* Remove default margins */
+        z-index: 1; /* Ensure it sits above the image */
+      }
+      
+      .flip-card-front img {
+  width: 100%; /* Image will fill the width of the card */
+  height: 100%; /* Image will fill the height of the card */
+  object-fit: cover; /* Image will cover the entire space without distorting */
+  padding-top: 0; /* Remove the padding to maximize the image size */
+}
+
+
+      
+      .flip-card-back {
+        transform: rotateY(180deg); /* Rotate the back card */
+        background-color: #f8f9fa; /* Background color for visibility */
+        color: #333; /* Text color */
+        padding: 20px; /* Add some padding for better spacing */
+        border: 1px solid #ccc; /* Optional: border for visibility */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+      }
+      
+      /* Other styles remain unchanged */
+      /* Flexbox layout for body and footer */
+      .container-fluid {
+        flex: 1;
+      }
+      
+      .title-image {
+        max-height: 150px;
+        width: auto;
+        display: block;
+        margin: 20px auto;
+      }
+      
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+      
+      .box {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: left;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        justify-content: flex-start;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        text-align: center;
+      }
+      
+      .box.animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .info-card {
+        width: 100%;
+      }
+      
+      .scan-series-title {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 40px;
+        font-weight: bold;
+      }
+      
+      .row-box img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+      
+      .row-box h4 {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .box p {
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      .flip-card-front.big-image img {
+  max-width: 100%;  /* or a custom width, e.g., 600px */
+  height: auto;     /* Maintain aspect ratio */
+  max-height: 300px;  /* Adjust the maximum height if needed */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Improved Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Koon Kan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto nav-links">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Scanseries.html">Scan Series</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Scanseries2.html">Scan Series 2.0</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="3D.html">3D Printing Experimental Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="early.html">Early Experimental Works</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  
+  
+  <!-- Body Content with 3 boxes in a row and 2 boxes in another row -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h4><b>Early Experimental Works</b></h4><br> <!-- Changed from h2 to h4 to match other titles -->
+      </div>
+    </div>
+
+      <div class="row">
+        <!-- First row: 3 boxes -->
+        <div class="col-md-6 d-flex">
+          <div class="box w-100 flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/Stream of Consciousness 2020-1 copyS.jpeg" alt="Image 3" />
+                <br><h6><i>Stream of Consciousness 2020 Remix</i></h6>
+              </div>
+              <div class="flip-card-back">
+                <p>Hey,
+                    <br>You found an easter egg!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="box w-100 flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/Up and Moving copyS.jpg" alt="Image 1" />
+                <br><h6><i>Up and Moving</i></h6>
+              </div>
+              <div class="flip-card-back">
+                <p>Hey,
+                    <br>You found an easter egg!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Koon Kan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const boxes = document.querySelectorAll(".box");
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animated");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        boxes.forEach((box) => {
+          observer.observe(box);
+        });
+
+        document.querySelectorAll(".flip-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            card.classList.toggle("flipped");
+          });
+        });
+      });
+  </script>
+</body>
+</html>

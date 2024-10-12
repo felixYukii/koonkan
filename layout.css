@@ -59,3 +59,19 @@
         min-height: 100vh; /* Ensure the body covers the entire viewport height */
       }
   
+      /* Make sure HTML and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox container to push the footer down */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area stretches to fill available space */
+.container-fluid, .container {
+  flex: 1;
+}
