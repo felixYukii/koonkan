@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scan Series 2.0 Artist Statement</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Flexbox layout for body and footer */
+    .container-fluid {
+      flex: 1; /* Take up remaining space to push the footer down */
+    }
+
+    /* Title image styling */
+    .title h1{
+    text-align: center;
+    }
+
+    .title p {
+      margin-top: 0px !important;
+    }
+
+    .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ensure title and paragraph stack vertically */
+    text-align: center;
+  }
+  
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .box {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0; /* Initially hidden */
+      transform: translateY(20px); /* Initial position off-screen */
+      transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+      color: inherit; /* Inherit color from parent (box) */
+      text-decoration: none; /* Remove underline */
+    }
+
+    .box.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .box p {
+      text-align: left; /* Left-align paragraphs inside the box */
+      margin-top: 10px;
+    }
+
+    .box h3, .box h4, .box h5, .box h6, .box p {
+      text-align: center;
+    }
+
+    .box h5{
+      font-size: 1.1em;
+    }
+
+    .cardHeading {
+      text-align: center;
+    }
+
+    .box:hover{
+      transform: scale(1.02);
+    }
+
+.box:hover {
+    color: inherit; /* Ensure color remains the same on hover */
+}
+
+.box h3, .box h4, .box h6, .box p {
+    margin: 0; /* Remove default margins to ensure consistent spacing */
+}
+
+.box h6{
+  font-size: 0.8em;
+}
+
+.lead{
+  text-align: left;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Improved Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Koon Kan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto nav-links">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Scanseries.html">Scan Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Scanseries2.html">Scan Series 2.0</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="3D.html">3D Printing Experimental Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="early.html">Early Experimental Works</a>
+        </li>
+
+        <!-- Dropdown for Artist Statements -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="artistStatementsDropdown" role="button">
+            Artist Statements
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="artistStatement1.html">1. Homepage</a></li>
+            <li><a class="dropdown-item" href="artistStatement2.html">2. Scan Series</a></li>
+            <li><a class="dropdown-item" href="artistStatement3.html">3. Scan Series 2.0</a></li>
+          </ul>          
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  <!-- Title Image -->
+  <div class="title container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="display-4"><b><i>Artist Statement for Scan Series 2.0</i></b></h1>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12 text-centre">
+        <h4 class="lead">
+            <br>In this series of creative digital photocollages, I tried to visually represent
+            the dilemma that Southeast Asia currently faces. My research interest grew
+            when a territorial dispute over the South China Sea, one of the busiest
+            waterways in the world, garnered the attention of world mass media over
+            the past years. I was drawn especially by the coverage and representation
+            of this geographic region because my own native country—Singapore—is
+            situated here.
+            <br><br>Recent excavations of shipwrecks in this region and navigation histories
+            inspired additional content. During the first millennium, traders traveled
+            both eastward and westward along the marine terrain dubbed the Ceramics
+            Route to transport exquisite products from Asia to Europe and vice versa.
+            The irregular outlines of my new works mimic fragments of china from
+            various dynasties (Tang, Song, and Ming) glazed with their characteristic
+            colors. A wide array of vessels and household utensils with distinctive
+            Chinese names were portrayed.
+            <br><br>In addition, in the myths and legends of Southeast Asia, gateways of
+            opportunities open when the protagonist encounters crisis or comes face to
+            face with adversaries. The two Chinese characters for crisis denote danger
+            and opportunity. Such stories were visually transformed, just as the
+            torrential rains convoying the trade winds were transformed into scanning
+            barcodes on commercial products.  
+        </h4>
+      </div>
+    </div>
+  </div>
+  
+    
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Koon Kan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const boxes = document.querySelectorAll('.box');
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      boxes.forEach(box => {
+        observer.observe(box);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 .nav-links a {
-    margin: 0 15px;
+    /* margin: 0 15px; */
     font-size: 18px;
     position: relative; /* Ensure relative positioning for pseudo-element */
     text-decoration: none; /* Remove default underline */
@@ -74,4 +74,68 @@ body {
 /* Main content area stretches to fill available space */
 .container-fluid, .container {
   flex: 1;
+}
+
+/* Full-width dropdown on mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static; /* Prevents overflow issues on smaller screens */
+    width: 100%; /* Full width */
+    left: 0;
+    right: 0;
+  }
+
+  .nav-item .dropdown-item {
+    padding: 1rem; /* Larger padding for better touch accessibility */
+    text-align: center; /* Center align text on mobile */
+    text-align: left;
+  }
+}
+
+
+/* Make dropdown appear on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+.nav-links .dropdown-toggle::after {
+  content: none; /* Remove the ::after content for "Artist Statements" */
+}
+
+/* Style the dropdown menu */
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333; /* Match navbar background */
+  padding: 0.25rem; /* Smaller padding for the entire dropdown */
+}
+
+/* Reduce size of dropdown items */
+.nav-item .dropdown-item {
+  text-decoration: none !important;
+  color: #fff;
+  padding: 0.5rem 1rem; /* Adjust padding for smaller item size */
+  font-size: 0.8rem; /* Slightly smaller font size */
+  line-height: 1.2; /* Reduce line height to make box smaller */
+  background-color: #333; /* Make background consistent */
+}
+
+/* Hover state for dropdown items */
+.nav-item .dropdown-item:hover {
+  background-color: #444;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+/* Remove underline animation for Artist Statements */
+.nav-links .dropdown-item:hover::after {
+  width: 0;
+}
+
+.nav-links .nav-link {
+  margin-right: 20px; /* Adjust the space between each link */
+}
+
+.navbar-nav .nav-item:last-child .nav-link {
+  margin-right: 0; /* Remove margin on the last item to avoid extra spacing */
 }
